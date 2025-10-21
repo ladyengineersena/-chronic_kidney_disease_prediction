@@ -1,36 +1,36 @@
-﻿# Kronik BÃ¶brek HastalÄ±ÄŸÄ± Tahmini (Chronic Kidney Disease Prediction)
+﻿# Kronik Böbrek Hastalığı Tahmini (Chronic Kidney Disease Prediction)
 
-Bu proje, Random Forest algoritmasÄ± kullanarak kronik bÃ¶brek hastalÄ±ÄŸÄ±nÄ±n erken tanÄ±sÄ±nÄ± yapmak iÃ§in geliÅŸtirilmiÅŸtir.
+Bu proje, Random Forest algoritması kullanarak kronik böbrek hastalığının erken tanısını yapmak için geliştirilmiştir.
 
-## Proje AÃ§Ä±klamasÄ±
+## Proje Açıklaması
 
-Kronik BÃ¶brek HastalÄ±ÄŸÄ± (CKD), bÃ¶brek fonksiyonlarÄ±nÄ±n zamanla azalmasÄ±yla karakterize edilen ciddi bir saÄŸlÄ±k durumudur. Erken tanÄ±, hastalÄ±ÄŸÄ±n ilerlemesini yavaÅŸlatmak ve komplikasyonlarÄ± Ã¶nlemek iÃ§in kritik Ã¶neme sahiptir.
+Kronik Böbrek Hastalığı (CKD), böbrek fonksiyonlarının zamanla azalmasıyla karakterize edilen ciddi bir sağlık durumudur. Erken tanı, hastalığın ilerlemesini yavaşlatmak ve komplikasyonları önlemek için kritik öneme sahiptir.
 
-Bu proje, Ã§eÅŸitli klinik parametreleri analiz ederek Random Forest makine Ã¶ÄŸrenmesi algoritmasÄ± ile CKD'nin erken tahminini yapar.
+Bu proje, çeşitli klinik parametreleri analiz ederek Random Forest makine öğrenmesi algoritması ile CKD'nin erken tahminini yapar.
 
 ## Ã–zellikler
 
-- **Veri Ã–n Ä°ÅŸleme**: Eksik deÄŸerlerin temizlenmesi ve veri normalizasyonu
-- **Random Forest Modeli**: YÃ¼ksek doÄŸruluk oranÄ± ile tahmin
-- **GÃ¶rselleÅŸtirme**: Model performansÄ±nÄ±n analizi ve gÃ¶rselleÅŸtirme
-- **DeÄŸerlendirme Metrikleri**: Accuracy, Precision, Recall, F1-Score
-- **Feature Importance**: En Ã¶nemli Ã¶zelliklerin belirlenmesi
-- **Ã‡apraz DoÄŸrulama**: Model gÃ¼venilirliÄŸinin test edilmesi
+- **Veri Ön İzleme**: Eksik değerlerin temizlenmesi ve veri normalizasyonu
+- **Random Forest Modeli**: Yüksek doğruluk oranÄ± ile tahmin
+- **Görselleştirme**: Model performansÄ±nÄ±n analizi ve görselleştirme
+- **Değerlendirme Metrikleri**: Accuracy, Precision, Recall, F1-Score
+- **Feature Importance**: En önemli özelliklerin belirlenmesi
+- **Çapraz Doğrulama**: Model güvenilirliğinin test edilmesi
 
 ## Kurulum
 
 ### Gereksinimler
 
-`ash
+`Bash
 pip install -r requirements.txt
 `
 
-### KullanÄ±m
+### Kullanım
 
 `python
 from ckd_predictor import CKDPredictor
 
-# Modeli eÄŸit
+# Modeli eğit
 predictor = CKDPredictor()
 predictor.load_data('data.csv')
 predictor.preprocess_data()
@@ -42,12 +42,12 @@ prediction = predictor.predict(new_patient_data)
 
 ## Veri Seti
 
-Proje, aÅŸaÄŸÄ±daki Ã¶zellikleri iÃ§eren kronik bÃ¶brek hastalÄ±ÄŸÄ± veri setini kullanÄ±r:
+Proje, aşağıdaki özellikleri içeren kronik böbrek hastalığı veri setini kullanır:
 
 - **Demografik Bilgiler**: YaÅŸ, cinsiyet
-- **Laboratuvar DeÄŸerleri**: Kan basÄ±ncÄ±, hemoglobin, albÃ¼min, kreatinin, vb.
-- **Fiziksel Ã–zellikler**: Boy, kilo, BMI
-- **TÄ±bbi GeÃ§miÅŸ**: Hipertansiyon, diyabet, koroner arter hastalÄ±ÄŸÄ±
+- **Laboratuvar Değerleri**: Kan basıncı, hemoglobin, albümin, kreatinin, vb.
+- **Fiziksel Özellikler**: Boy, kilo, BMI
+- **Tıbbi Geçmiş**: Hipertansiyon, diyabet, koroner arter hastalÄ±ÄŸÄ±
 
 ## Model PerformansÄ±
 
